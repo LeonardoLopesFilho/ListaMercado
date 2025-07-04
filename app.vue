@@ -51,9 +51,9 @@
           <v-card-title
             class="d-flex justify-space-between align-center bg-blue-darken-1 text-white"
           >
-            <span>📦 Lista de Produtos</span>
+            <span>📦 Lista</span>
             <v-btn color="red" density="comfortable" @click="clearItems">
-              Excluir Todos
+              Excluir
             </v-btn>
           </v-card-title>
           <v-card-text>
@@ -89,7 +89,7 @@
         <!-- Carrinho -->
         <v-card v-if="cart.length" class="mt-6" elevation="2">
           <v-card-title class="bg-green-darken-2 text-white">
-            🛍️ Itens no Carrinho
+            🛍️ Carrinho
           </v-card-title>
           <v-card-text>
             <v-list>
@@ -117,7 +117,7 @@
                     Total: R$ {{ (item.price * item.quantity).toFixed(2) }}
                   </div>
                   <v-btn icon color="red" @click="removeFromCart(index)">
-                    <v-icon>mdi-delete</v-icon>
+                    X
                   </v-btn>
                 </div>
               </v-list-item>
